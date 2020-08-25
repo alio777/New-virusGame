@@ -6,7 +6,7 @@ const debug = require('debug')('covidGame:socket_controller');
 
 let io = null;
 const users = {}; 
-let roundsPlayed = 0;
+let games = 0;
 let maxRounds = 3;
 
 
@@ -42,7 +42,7 @@ function handlePlayerRegistration(nickname, callback) {
 }
 
 function handlePlayerClick(data) {
-	roundsPlayed++;
+	games++;
 
 	const datainfo = {
 		nickname: data.name,
@@ -56,11 +56,11 @@ function handlePlayerClick(data) {
 		width: randomPosition(300),
 		height: randomPosition(500)
 	}
-	if (roundsPlayed < maxRounds) {		
+	if (games < maxRounds) {		
 		io.emit('new-round', clickVirusPosition, datainfo, randomDelay);
-	} else if (roundsPlayed === maxRounds){
+	} else if (games === maxRounds){
 		io.emit('game-over', datainfo)
-		roundsPlayed = 0;
+		games = 0;
 	}
 }
 function handlePlayerDisconnect() {
