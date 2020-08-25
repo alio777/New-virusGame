@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+
+.load {
+	width: 200px;
+	height: 200px;
+}
+
+.hide {
+    display: none !important;
+}
+
+#app {
+	background-color: #aacadd;
+	height: 100vh;
+	width: 100vw;
+}
+
+#startPage {
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#playingField {
+	height: 100vh;
+	display: flex;
+	justify-content: flex-start;
+}
+#gameBoard {
+	margin-left: 3rem;
+	margin-right: 3rem;
+	margin-top: 3rem;
+	width: 75%;
+}
+
+#play {
+	background-color: rgb(255, 255, 255);
+	height: 350px;
+	width: 540px;
+	position: relative;
+	margin: auto;
+	display: flex;
+}
+
+#virus {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+
+#waitForConnect p {
+	font-size: 1.5rem;
+}
+
+#getReady {
+	font-size: 8rem;
+}
+
+#countdown {
+	font-size: 6rem;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+}
+
+#message-wrapper {
+	flex-grow: 1;
+}
+
+#messages li .user {
+	font-weight: bold;
+}
+
+#messages .notice {
+	font-style: italic;
+}
